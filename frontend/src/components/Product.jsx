@@ -1,4 +1,9 @@
-import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import {
+  AiOutlineStar,
+  AiFillStar,
+  AiOutlineMinusCircle,
+  AiOutlinePlusCircle,
+} from "react-icons/ai";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../redux/Action/ProductAction";
@@ -52,21 +57,62 @@ function Product() {
                 <span>(120)</span>
               </span>
             </div>
+            <div className="flex justify-start items-center">
+              <AiOutlinePlusCircle
+                size={25}
+                onClick={() => setQty(qty + 1)}
+                className="cursor-pointer"
+              />
+              {qty}
+              <AiOutlineMinusCircle
+                size={25}
+                onClick={() => setQty(qty - 1)}
+                className="cursor-pointer"
+              />
+            </div>
             <div className="border-b-2 border-b-black-500  max-w-[500px]">
               <span className="font-bold">${product.price}</span>
             </div>
             <div>
-              <div className="flex">
-                <button className="bg-[goldenrod] text-white mr-2 mt-2">
-                  Buy item
-                </button>
-                <button
-                  className="mr-2 mt-2 bg-[goldenrod]"
-                  onClick={addToCart}
-                >
-                  Add to cart
-                </button>
-              </div>
+              <p>
+                This is pure gold from Mali. Mali is a west african country
+                located in west africa, with a population of over 60 millions
+                inhabitants This is pure gold from Mali. Mali is a west african
+                country located in west africa, with a population of over 60
+                millions inhabitants This is pure gold from Mali. Mali is a west
+                african country located in west africa, with a population of
+                over 60 millions inhabitants This is pure gold from Mali. Mali
+                is a west african country located in west africa, with a
+                population of over 60 millions inhabitants
+              </p>
+            </div>
+            <div>
+              {product.countItems > 0 ? (
+                <div className="flex">
+                  <button className={"bg-[green] text-white mr-2 mt-2"}>
+                    Available
+                  </button>
+                  <button
+                    className="mr-2 mt-2 bg-[goldenrod]"
+                    onClick={addToCart}
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              ) : (
+                <div className="flex">
+                  <button className={"bg-[red] text-white mr-2 mt-2"}>
+                    Unavailable
+                  </button>
+                  <button
+                    className="mr-2 mt-2 bg-[gray]"
+                    onClick={addToCart}
+                    disabled
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

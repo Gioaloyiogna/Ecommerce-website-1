@@ -9,6 +9,7 @@ class Navbar extends Component {
     };
   }
   componentDidMount() {
+    // Hiding and showing navBar on scroll.
     window.addEventListener("scroll", () => {
       const navBar = document.getElementById("navbar").scrollHeight;
       const scrollHeight = window.pageYOffset;
@@ -16,24 +17,20 @@ class Navbar extends Component {
         if (!this.state.nav) {
           this.setState({ nav: true });
         }
-
-        console.log(document.getElementById("navbar"));
       } else {
         this.setState({ nav: false });
       }
     });
   }
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll");
-  // }
+
   render() {
     return (
-      <div id="navbar">
+      <>
         <nav
           className={
             this.state.nav
-              ? "w-[1640px] h-[5rem] flex fixed justify-around items-center px-4 bg-white z-[999] transition duration-1000 ease-in-out ease-linear "
-              : " max-w-[1640px]  h-[5rem] flex  justify-around items-center px-4 bg-white transition ease-linear  duration-1000 ease-in-out "
+              ? "w-[100%] h-[5rem] flex fixed justify-around items-center px-4 bg-white z-[999] transition duration-1000 ease-in-out ease-linear bg-white rounded-lg shadow-lg"
+              : " w-[100%]  h-[5rem] flex  justify-around items-center px-4 bg-white transition ease-linear  duration-1000 ease-in-out bg-white rounded-sm shadow-sm bo "
           }
         >
           {/* logo section */}
@@ -64,7 +61,6 @@ class Navbar extends Component {
           </div>
           {/* Search box */}
           <div className="flex items-center rounded-full bg-gray-200 w-[200px] sm:w-[400px] lg:[500px]">
-            <AiOutlineSearch size={30} />
             <input
               type="search"
               name=""
@@ -81,7 +77,7 @@ class Navbar extends Component {
             </button>
           </div>
         </nav>
-      </div>
+      </>
     );
   }
 }

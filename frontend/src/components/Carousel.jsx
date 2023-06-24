@@ -1,7 +1,28 @@
-
 import React, { Component } from "react";
 import { Carouseldata } from "./Carouseldata";
 import Slider from "react-slick";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default class Carousel extends Component {
   render() {
@@ -11,9 +32,11 @@ export default class Carousel extends Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,
+      nextArrow:<SampleNextArrow/>,
+      prevArrow:<SamplePrevArrow/>
     };
     return (
-      <div className="mt-8 mb-8 max-w-[1200px] p-[2rem] mx-auto bg-black ">
+      <div className="mt-8 mb-8 max-w-[100%] p-[2rem] mx-5 bg-white rounded-lg shadow-lg ">
         <h1 className="text-center text-[goldenrod] text-5xl p-4">
           Featured Products
         </h1>

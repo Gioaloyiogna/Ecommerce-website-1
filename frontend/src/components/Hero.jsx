@@ -40,13 +40,13 @@ class Hero extends Component {
   };
   render() {
     return (
-      <div className="max-w-[1640px] h-[30rem] p-4 mx-auto overflow-hidden">
+      <div className="max-w-[100%] h-[30rem] p-4 mx-auto overflow-hidden mt-5 ">
         {Carouseldata.map((slide, index) => {
           return (
             <div
               className={
                 index === this.state.currentSlide
-                  ? "relative h-[30rem] max-w-[1640px] bg-black "
+                  ? "relative h-[30rem] max-w-[100%] bg-black mx-5"
                   : "hidden"
               }
             >
@@ -69,21 +69,18 @@ class Hero extends Component {
                 key={index}
                 className={" block w-full object-cover h-full "}
               />
-              <div className="absolute top-[50%] left-0 right-0 flex justify-between">
-                <span className="bg-black cursor-pointer  p-2">
-                  <AiOutlineLeft
-                    size={30}
-                    className="text-white"
-                    onClick={this.slideLeft}
-                  />
-                </span>
-                <span className="bg-black cursor-pointer  p-2">
-                  <AiOutlineRight
-                    size={30}
-                    className="text-white"
-                    onClick={this.slideRight}
-                  />
-                </span>
+              <div className="absolute top-[50%] bottom-[50%] left-0 right-0 flex justify-between">
+                <AiOutlineLeft
+                  size={40}
+                  className="bg-black cursor-pointer relative p-2 text-white"
+                  onClick={this.slideLeft}
+                />
+
+                <AiOutlineRight
+                  size={40}
+                  className="text-white  bg-black cursor-pointer  relative p-2"
+                  onClick={this.slideRight}
+                />
               </div>
             </div>
           );

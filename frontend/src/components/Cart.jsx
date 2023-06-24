@@ -3,7 +3,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
-import { addTocart } from "../redux/constants/cartAction";
+import { addTocart } from "../redux/Action/cartAction.js";
 
 function Cart() {
   const params = useParams();

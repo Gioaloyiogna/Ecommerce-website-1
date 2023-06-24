@@ -6,7 +6,7 @@ const Carouseldata = [
     price: "1300",
     rating: 0,
     numberViews: 0,
-    countItems: 0,
+    countItems: "2",
   },
   {
     name: "White Gold",
@@ -15,11 +15,11 @@ const Carouseldata = [
     price: "1300",
     rating: 0,
     numberViews: 0,
-    countItems: 0,
+    countItems: 3,
   },
   {
     name: "White Gold",
-    image: "/images/image3.jpg",
+    image: "/images/image2.jpg",
     description: " Thank us, afterwards",
     price: "1300",
     rating: 0,
