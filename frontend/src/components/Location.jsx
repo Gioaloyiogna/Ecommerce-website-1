@@ -14,7 +14,7 @@ const Location = () => {
   };
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyCJ_cQ-M6JOGblhZ4aK_eLY48LasyoDF_U",
+    googleMapsApiKey: "",
   });
   const [map, setMap] = useState(null);
 
