@@ -52,10 +52,10 @@ class Navbar extends Component {
                 <a href="www.google.com">Products</a>
               </li>
               <li className="px-4 cursor-pointer text-2xl text-[goldenrod] ">
-                <a href="www.google.com">Location</a>
+                <a href="/location">Location</a>
               </li>
               <li className="px-4 cursor-pointer text-2xl text-[goldenrod]">
-                <a href="www.google.com">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>

@@ -18,12 +18,7 @@ const Products = () => {
           All Products
         </h1>
         <div>
-          <button className="text-[goldenrod] mx-1 border-none text-uppercase text-2xl">
-            #White Gold
-          </button>
-          <button className="text-[goldenrod] mx-1 border-none text-uppercase text-2xl">
-            #Yellow Gold
-          </button>
+         
         </div>
         <div className="grid lg:grid-cols-4 sm:grid-cols-1   bg-[#ddd] p-2 gap-[2px] ">
           {loading ? (

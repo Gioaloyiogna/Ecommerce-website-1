@@ -16,11 +16,12 @@ const PORT = process.env.PORT;
 app.listen(PORT, console.log(`server is running on port ${PORT}`));
 
 // // //loading all products from server
-// app.get("/api/products", (req, res) => {
-//   res.json(Carouseldata);
-// });
+app.get("/api/products", (req, res) => {
+  res.json(Carouseldata);
+});
+app.get("/", ()=>console.log('hello'))
 // // //loading single product
-// app.get("/api/product/:id", (req, res) => {
-//   const product = Carouseldata.find((p) => p._id === req.params.id);
-//   return res.json(product);
-// });
+app.get("/api/product/:id", (req, res) => {
+  const product = Carouseldata.find((p) => p._id === req.params.id);
+  return res.json(product);
+});

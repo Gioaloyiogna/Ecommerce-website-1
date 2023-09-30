@@ -15,8 +15,8 @@ function HomeScreen(props) {
       <Service />
       <Carousel />
       <Products />
-      <Location />
-      <Contact />
+      {/* <Location /> */}
+      {/* <Contact /> */}
       <Footer />
     </div>
   );
